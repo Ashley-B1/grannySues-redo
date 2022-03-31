@@ -1,11 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import Hero from "./components/Hero";
-import Products from "./components/Products";
-import Feature from './components/Feature';
-import Footer from './components/Footer';
-
-import { dinnerData, dessertData } from './components/Products/data';
+import SplashPage from './components/SplashPage';
 import NotFound from './components/NotFound';
 // something
 function App() {
@@ -13,11 +8,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path='/'>
-          <Hero />
-          <Products heading='Order Dinner' data={dinnerData} />
-          <Feature />
-          <Products heading='Sweet Tooth?' data={dessertData} />
-          <Footer />
+          <SplashPage />
         </Route>
         <Route path='*'>
           <NotFound />
